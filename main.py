@@ -5,11 +5,11 @@ import shapely
 import ezdxf
 
 # Constants
-RESOLUTION = 10  # number of points per waveform
+RESOLUTION = 100  # number of points per waveform
 REVCYCLES = 50  # number of surface cycles per revolution of the wheel
 RADIUS = 20  # nominal radius of the wheel, mm
-AMPLITUDE = 2  # amplitude of the surface
-WAVETYPE = "saw"  # type of wave to use
+AMPLITUDE = RADIUS * 0.05  # amplitude of the surface
+WAVETYPE = "sqr"  # type of wave to use
 WAVES = ["sin", "saw", "sqr", "hill", "tri"]  # valid wave types
 FILENAME = f"DXFS/tonewheel_{WAVETYPE}_r{RADIUS}_{REVCYCLES}T.dxf"
 SHOWDEMO = False
